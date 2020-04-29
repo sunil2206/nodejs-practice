@@ -7,15 +7,16 @@
     </head>
     <body>
         <h1>its my to do app</h1>
-        <div class="todo-table">
+        <div id="todo-table">
             <form>
-                <input type="text" placeholder="Add new iten" id="itme" name="item"/>
-                <button type="submit" id="add">Add</button>
+                <input type="text" placeholder="Add new iten" id="item" name="item">
+                <button type="submit">Add</button>
             </form>
             <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
+                <% for(var i=0 ;i < todos.length; i++){%>
+                    <li><%= todos[i] .item%></li>
+               <% } %>
+               
             </ul>
         </div>
     </body>
