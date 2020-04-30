@@ -11,7 +11,7 @@ app.get('/todo',function(req,res){
 
 app.post('/todo',urlEncodedParser,function(req,res){
     data.push(req.body);
-    res.JSON(data);
+    res.render('todo',{todos:data});
 });
 app.delete('/todo',function(req,res){
     
